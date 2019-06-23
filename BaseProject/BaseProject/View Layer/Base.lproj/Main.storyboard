@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="BaseProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-9d-4gt">
+                                <rect key="frame" x="162.5" y="408.5" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="ne3-fZ-2cq"/>
+                                    <constraint firstAttribute="height" constant="50" id="ugx-h4-ZTW"/>
+                                </constraints>
+                                <state key="normal" title="HIT"/>
+                                <connections>
+                                    <action selector="animateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G0r-dj-p35"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yrH-tM-8bs">
+                                <rect key="frame" x="131.5" y="60" width="112.5" height="112.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OR7-M8-UYm">
+                                        <rect key="frame" x="11" y="11.5" width="90" height="90"/>
+                                        <color key="backgroundColor" red="0.1960784314" green="0.14117647059999999" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="OR7-M8-UYm" secondAttribute="height" multiplier="1:1" id="Vvr-8F-InY"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.36470588240000001" green="0.80392156859999997" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="OR7-M8-UYm" firstAttribute="width" secondItem="yrH-tM-8bs" secondAttribute="width" multiplier="0.8" id="SA9-T0-45K"/>
+                                    <constraint firstItem="OR7-M8-UYm" firstAttribute="centerY" secondItem="yrH-tM-8bs" secondAttribute="centerY" id="pck-ci-tz1"/>
+                                    <constraint firstItem="OR7-M8-UYm" firstAttribute="centerX" secondItem="yrH-tM-8bs" secondAttribute="centerX" id="pkJ-dr-P0H"/>
+                                    <constraint firstAttribute="width" secondItem="yrH-tM-8bs" secondAttribute="height" multiplier="1:1" id="sLw-rK-Vy3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yrH-tM-8bs" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="322-tK-eNg"/>
+                            <constraint firstItem="yrH-tM-8bs" firstAttribute="centerX" secondItem="bbp-9d-4gt" secondAttribute="centerX" id="Aq5-n6-4N2"/>
+                            <constraint firstItem="bbp-9d-4gt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="100" id="sbY-5R-HCo"/>
+                            <constraint firstItem="bbp-9d-4gt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xga-lk-Nv6"/>
+                            <constraint firstItem="yrH-tM-8bs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="y5S-ZJ-eSe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="animatedView" destination="yrH-tM-8bs" id="by4-cR-AD8"/>
+                        <outlet property="subAnimatedView" destination="OR7-M8-UYm" id="HSG-ch-iDe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
